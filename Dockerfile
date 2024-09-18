@@ -167,11 +167,11 @@ RUN apt-get update && \
     apt-transport-https
 
 # Add CubeCoders repository and key
-RUN wget -qO - http://repo.cubecoders.com/archive.key | gpg --dearmor > /etc/apt/trusted.gpg.d/cubecoders-archive-keyring.gpg && \
+RUN wget -qO - https://repo.cubecoders.com/archive.key | gpg --dearmor > /etc/apt/trusted.gpg.d/cubecoders-archive-keyring.gpg && \
     if [ "$TARGETPLATFORM" = "linux/arm64" ]; then \
-        apt-add-repository "deb http://repo.cubecoders.com/aarch64 debian/"; \
+        apt-add-repository "deb https://repo.cubecoders.com/aarch64 debian/"; \
     else \
-        apt-add-repository "deb http://repo.cubecoders.com/ debian/"; \
+        apt-add-repository "deb https://repo.cubecoders.com/ debian/"; \
     fi && \
     apt-get update && \
     # Just download (don't actually install) ampinstmgr
