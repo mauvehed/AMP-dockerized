@@ -5,7 +5,19 @@
 
 version: 2
 updates:
+  # Maintain dependencies for Docker containers
   - package-ecosystem: "docker" # See documentation for possible values
     directory: "/" # Location of package manifests
     schedule:
-      interval: "weekly"
+      interval: "daily"
+    target-branch: "master"
+    assignees:
+      - "mauvehed"
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    target-branch: "master"
+    assignees:
+      - "mauvehed"
