@@ -10,6 +10,12 @@
 > A lack of commits & releases does not mean this project is dead. The image is configured by default to auto-update AMP on startup, meaning that new image releases are often not necessary.
 
 # AMP-dockerized
+[![Build](https://github.com/mauvehed/AMP-dockerized/actions/workflows/build.yml/badge.svg)](https://github.com/mauvehed/AMP-dockerized/actions/workflows/build.yml)
+[![Dependabot Updates](https://github.com/mauvehed/AMP-dockerized/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/mauvehed/AMP-dockerized/actions/workflows/dependabot/dependabot-updates)
+
+[![Deploy Staging](https://github.com/mauvehed/AMP-dockerized/actions/workflows/deploy-staging.yml/badge.svg)](https://github.com/mauvehed/AMP-dockerized/actions/workflows/deploy-staging.yml)
+[![Deploy Production](https://github.com/mauvehed/AMP-dockerized/actions/workflows/deploy-prod.yml/badge.svg)](https://github.com/mauvehed/AMP-dockerized/actions/workflows/deploy-prod.yml)
+
 This repository bundles [CubeCoders AMP](https://cubecoders.com/AMP) into a Debian-based [Docker image.](https://hub.docker.com/r/mitchtalmadge/amp-dockerized)
 (`mitchtalmadge/amp-dockerized:latest`) so that you can set up game servers with ease! 
 
