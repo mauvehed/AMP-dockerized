@@ -2,6 +2,7 @@ name: "Deploy Staging"
 
 on:
   push:
+    workflow_dispatch:
     branches:
       - "staging*"
     paths:
