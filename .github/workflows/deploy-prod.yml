@@ -88,15 +88,17 @@ jobs:
       - name: "Tag Images for GitHub Container Registry"
         run: |
           for tag in ${{ steps.load_images.outputs.TAGS }}; do
-            # Re-tag Docker images for GHCR
-            GHCR_TAG="ghcr.io/${{ github.repository_owner }}/amp-dockerized:${{ steps.get_tag_name.outputs.TAG_NAME }}-${{ tag##*: }}"
+            # Extract architecture tag from the full Docker tag using shell syntax
+            ARCH=$(echo "${tag}" | cut -d ':' -f 2)
+            GHCR_TAG="ghcr.io/${{ github.repository_owner }}/amp-dockerized:${{ steps.get_tag_name.outputs.TAG_NAME }}-${ARCH}"
             docker tag "${tag}" "${GHCR_TAG}"
           done
 
       - name: "Deploy to GitHub Container Registry"
         run: |
           for tag in ${{ steps.load_images.outputs.TAGS }}; do
-            GHCR_TAG="ghcr.io/${{ github.repository_owner }}/amp-dockerized:${{ steps.get_tag_name.outputs.TAG_NAME }}-${{ tag##*: }}"
+            ARCH=$(echo "${tag}" | cut -d ':' -f 2)
+            GHCR_TAG="ghcr.io/${{ github.repository_owner }}/amp-dockerized:${{ steps.get_tag_name.outputs.TAG_NAME }}-${ARCH}"
             docker push "${GHCR_TAG}"
           done
 
