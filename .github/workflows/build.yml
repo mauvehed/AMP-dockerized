@@ -38,4 +38,5 @@ jobs:
         with:
           name: docker-image-amd64
           path: /tmp/docker-image-amd64.tar
+          retention-days: 3
 
