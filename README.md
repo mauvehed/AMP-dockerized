@@ -3,7 +3,7 @@
 >
 > **Please DO NOT ask ANY of us for support. They do not support nor endorse this image and will tell you that you are on your own, as will I.**
 
-> **USE AT YOUR OWN RISK**
+> **[!USE AT YOUR OWN RISK]**
 
 # AMP-dockerized
 [![Build](https://github.com/mauvehed/AMP-dockerized/actions/workflows/build.yml/badge.svg)](https://github.com/mauvehed/AMP-dockerized/actions/workflows/build.yml)
