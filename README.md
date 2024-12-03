@@ -3,7 +3,7 @@
 >
 > **Please DO NOT ask ANY of us for support. They do not support nor endorse this image and will tell you that you are on your own, as will I.**
 
-[!CAUTION]
+> [!CAUTION]
 > **USE AT YOUR OWN RISK**
 
 # AMP-dockerized
