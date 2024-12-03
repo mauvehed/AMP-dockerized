@@ -59,7 +59,8 @@ RUN apt-get update && \
     rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
 
 # Install AMP dependencies
-RUN apt-get update && \
+RUN dpkg --add-architecture i386 && \
+    apt-get update && \
     apt-get install -y --no-install-recommends \
     bzip2 \
     coreutils \
@@ -88,13 +89,11 @@ RUN apt-get update && \
     lib32gcc-s1 \
     lib32stdc++6 \
     lib32z1 \
-    libbz2-1.0:i386 \
-    libcurl3-gnutls:i386 \
+    libbz2-1.0 \
     libcurl4 \
-    libncurses5:i386 \
+    libncurses5 \
     libsdl2-2.0-0 \
-    libsdl2-2.0-0:i386 \
-    libtinfo5:i386 && \
+    libtinfo5 && \
     apt-get -y clean && \
     apt-get -y autoremove --purge && \
     rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/*
