@@ -16,7 +16,7 @@ ENV AMP_RELEASE_STREAM=Mainline
 ENV AMP_SUPPORT_LEVEL=UNSUPPORTED
 ENV AMP_SUPPORT_TOKEN=AST0/MTAD
 ENV AMP_SUPPORT_TAGS="nosupport docker community unofficial unraid"
-ENV AMP_SUPPORT_URL="https://github.com/MitchTalmadge/AMP-dockerized/"
+ENV AMP_SUPPORT_URL="https://github.com/mauvehed/AMP-dockerized/"
 ENV LD_LIBRARY_PATH="./:/opt/cubecoders/amp/:/AMP/"
 
 ARG DEBIAN_FRONTEND=noninteractive

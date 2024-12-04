@@ -7,7 +7,7 @@ All other files in this repository, including the Dockerfile, entrypoint, and ex
 ```
 MIT License
 
-Copyright (c) 2019 Mitch Talmadge
+Copyright (c) 2019 Mitch Talmadge, mauvehed
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

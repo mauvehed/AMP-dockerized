@@ -8,8 +8,6 @@ echo "----------------------"
 echo "Note: This is an UNOFFICIAL IMAGE for CubeCoders AMP. This was created by the community, NOT CubeCoders."
 echo "Please, DO NOT contact CubeCoders (Discord or otherwise) for technical support when using this image."
 echo "They do not support nor endorse this image and will not help you."
-echo "Instead, please direct support requests to https://github.com/MitchTalmadge/AMP-dockerized/issues."
-echo "Thank you!!"
 echo "----------------------"
 echo ""
 

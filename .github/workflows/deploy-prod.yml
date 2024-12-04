@@ -32,6 +32,9 @@ jobs:
       cancel-in-progress: true
 
     steps:
+      - name: "Debug GITHUB_ACTOR"
+        run: echo "Actor: $GITHUB_ACTOR"
+
       - name: "Download Docker Image Artifact"
         uses: actions/download-artifact@v4
         with:
@@ -62,15 +65,21 @@ jobs:
       - name: "Push Docker Image to Docker Hub"
         run: docker push mauvehed/amp-dockerized:${{ steps.get_tag_name.outputs.TAG_NAME }}
 
+      # - name: "Login to GitHub Container Registry"
+      #   uses: docker/login-action@v3
+      #   with:
+      #     registry: ghcr.io
+      #     username: ${{ secrets.GITHUB_ACTOR }}
+      #     password: ${{ secrets.GITHUB_TOKEN }}
+
       - name: "Login to GitHub Container Registry"
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ secrets.GITHUB_ACTOR }}
+          username: mauvehed  # Replace with your GitHub username or organization
           password: ${{ secrets.GITHUB_TOKEN }}
-
+  
       - name: "Tag and Push to GitHub Container Registry"
         run: |
           docker tag mauvehed/amp-dockerized:${{ steps.get_tag_name.outputs.TAG_NAME }} ghcr.io/${{ github.repository_owner }}/amp-dockerized:${{ steps.get_tag_name.outputs.TAG_NAME }}
           docker push ghcr.io/${{ github.repository_owner }}/amp-dockerized:${{ steps.get_tag_name.outputs.TAG_NAME }}
-
