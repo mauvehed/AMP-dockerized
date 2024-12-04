@@ -33,7 +33,8 @@ jobs:
 
     steps:
       - name: "Debug GITHUB_ACTOR"
-        run: echo "Actor: $GITHUB_ACTOR"
+        run: |
+          echo "Actor: $GITHUB_ACTOR"
 
       - name: "Download Docker Image Artifact"
         uses: actions/download-artifact@v4
